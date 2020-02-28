@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--ARView-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" userLabel="ARView" customClass="ViewController" customModule="ARBall" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="0wi-IM-FZo" customClass="ARView" customModule="RealityKit">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="D8d-A5-0nm">
+                                <rect key="frame" x="0.0" y="414" width="414" height="448"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="i0A-O4-alg">
+                                <rect key="frame" x="344" y="60" width="38" height="39.5"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="18"/>
+                                <color key="tintColor" systemColor="systemOrangeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" image="gobackward" catalog="system">
+                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="font">
+                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="32"/>
+                                    </preferredSymbolConfiguration>
+                                </state>
+                                <connections>
+                                    <action selector="didTapReposition:" destination="BYZ-38-t0r" eventType="touchUpInside" id="fiz-NE-ow2"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0 points" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fVh-4K-ZIE">
+                                <rect key="frame" x="32" y="60" width="185" height="51"/>
+                                <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="40"/>
+                                <color key="textColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ARBall" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aTv-7c-3Z0">
+                                <rect key="frame" x="56.5" y="402.5" width="301" height="101"/>
+                                <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="80"/>
+                                <color key="textColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nQD-Bv-3mg">
+                                <rect key="frame" x="159.5" y="519.5" width="95" height="51"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                                <color key="tintColor" systemColor="systemOrangeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="START"/>
+                                <connections>
+                                    <action selector="didTapStart:" destination="BYZ-38-t0r" eventType="touchUpInside" id="WVl-yh-cK7"/>
+                                </connections>
+                            </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0eN-xL-VRp" customClass="ARCoachingOverlayView">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="nQD-Bv-3mg" firstAttribute="top" secondItem="aTv-7c-3Z0" secondAttribute="bottom" constant="16" id="0Ff-dx-Vxx"/>
+                            <constraint firstItem="aTv-7c-3Z0" firstAttribute="top" secondItem="hWR-Ph-mnc" secondAttribute="top" constant="358.5" id="2uL-T0-alB"/>
+                            <constraint firstItem="aTv-7c-3Z0" firstAttribute="centerY" secondItem="hWR-Ph-mnc" secondAttribute="centerY" id="49f-ao-kee"/>
+                            <constraint firstItem="fVh-4K-ZIE" firstAttribute="top" secondItem="hWR-Ph-mnc" secondAttribute="top" constant="16" id="4LN-iA-c6X"/>
+                            <constraint firstItem="0eN-xL-VRp" firstAttribute="top" secondItem="hWR-Ph-mnc" secondAttribute="top" id="Euf-TG-TeN"/>
+                            <constraint firstItem="hWR-Ph-mnc" firstAttribute="trailing" secondItem="i0A-O4-alg" secondAttribute="trailing" constant="32" id="GNl-3M-Oq3"/>
+                            <constraint firstItem="i0A-O4-alg" firstAttribute="top" secondItem="hWR-Ph-mnc" secondAttribute="top" constant="16" id="GQJ-eC-w6Y"/>
+                            <constraint firstItem="nQD-Bv-3mg" firstAttribute="centerX" secondItem="hWR-Ph-mnc" secondAttribute="centerX" id="GdJ-Rz-RKB"/>
+                            <constraint firstItem="hWR-Ph-mnc" firstAttribute="trailing" secondItem="D8d-A5-0nm" secondAttribute="trailing" id="UQb-9F-04A"/>
+                            <constraint firstItem="aTv-7c-3Z0" firstAttribute="centerX" secondItem="hWR-Ph-mnc" secondAttribute="centerX" id="Vl6-nv-zKn"/>
+                            <constraint firstItem="D8d-A5-0nm" firstAttribute="leading" secondItem="hWR-Ph-mnc" secondAttribute="leading" id="XNG-A4-E2R"/>
+                            <constraint firstItem="0eN-xL-VRp" firstAttribute="leading" secondItem="hWR-Ph-mnc" secondAttribute="leading" id="Z9e-0g-zv2"/>
+                            <constraint firstItem="hWR-Ph-mnc" firstAttribute="trailing" secondItem="0eN-xL-VRp" secondAttribute="trailing" id="biK-q4-goy"/>
+                            <constraint firstItem="hWR-Ph-mnc" firstAttribute="bottom" secondItem="0eN-xL-VRp" secondAttribute="bottom" id="gjY-Vw-5MT"/>
+                            <constraint firstItem="fVh-4K-ZIE" firstAttribute="leading" secondItem="hWR-Ph-mnc" secondAttribute="leading" constant="32" id="het-8x-eCT"/>
+                            <constraint firstItem="i0A-O4-alg" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="fVh-4K-ZIE" secondAttribute="trailing" constant="16" id="i9R-e3-b3g"/>
+                            <constraint firstItem="hWR-Ph-mnc" firstAttribute="bottom" secondItem="D8d-A5-0nm" secondAttribute="bottom" id="neU-hF-TD1"/>
+                            <constraint firstItem="D8d-A5-0nm" firstAttribute="height" secondItem="0wi-IM-FZo" secondAttribute="height" multiplier="0.5" id="tc8-pb-h2R"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="hWR-Ph-mnc"/>
+                    </view>
+                    <connections>
+                        <outlet property="arView" destination="0wi-IM-FZo" id="ez6-M2-euZ"/>
+                        <outlet property="coachingView" destination="0eN-xL-VRp" id="Lia-NX-bAD"/>
+                        <outlet property="pointsLabel" destination="fVh-4K-ZIE" id="h42-Us-ISc"/>
+                        <outlet property="repositionButton" destination="i0A-O4-alg" id="Khk-ha-5jb"/>
+                        <outlet property="startButton" destination="nQD-Bv-3mg" id="PdX-iQ-Zuf"/>
+                        <outlet property="titleLabel" destination="aTv-7c-3Z0" id="3TH-mP-98N"/>
+                        <outlet property="touchView" destination="D8d-A5-0nm" id="zLM-9d-DQH"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="138" y="134"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="gobackward" catalog="system" width="60" height="64"/>
+    </resources>
+</document>
